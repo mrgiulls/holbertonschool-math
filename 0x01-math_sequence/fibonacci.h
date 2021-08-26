@@ -1,25 +1,21 @@
-#ifndef FIBONACCI_H
-#define FIBONACCI_H
+#ifndef FIBO_H
+#define FIBO_H
 
-#include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
+#include <math.h>
 
 /**
- * struct list_math - singly linked list
- * @elt: result of the sequence
- * @next: points to the next node
- *
- * Description: singly linked list node structure
+ * struct s_cell - a struct to store a Fibonacci sequence
+ * @elt: a member of the Fibonacci sequence
+ * @next: a pointer to the next node
  */
-
-typedef struct list_math
+typedef struct s_cell
 {
-int elt;
-struct list_math *next;
+	int elt;
+	struct s_cell *next;
 } t_cell;
 
-t_cell *Fibonnaci();
+t_cell *Fibonnaci(void);
 double gold_number(t_cell *head);
 
-#endif /* FIBONACCI_H */
+#endif
