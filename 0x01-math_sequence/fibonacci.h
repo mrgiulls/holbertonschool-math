@@ -1,21 +1,25 @@
-#ifndef FIBO_H
-#definir FIBO_H
+#ifndef FIBONACCI_H
+#define FIBONACCI_H
 
-#incluir  <> stdlib.h
-#incluir  <> math.h
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 /**
- * struct s_cell - un struct para almacenar una secuencia de Fibonacci
- * @elt: un miembro de la secuencia de Fibonacci
- * @next: un puntero al siguiente nodo
+ * struct list_math - singly linked list
+ * @elt: result of the sequence
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
  */
-s_cell typedef struct
+
+typedef struct list_math
 {
-	int elt;
-	struct s_cell *next;
+int elt;
+struct list_math *next;
 } t_cell;
 
-t_cell *Fibonnaci(vacío);
-doble gold_number(t_cell *cabeza);
+t_cell *Fibonnaci();
+double gold_number(t_cell *head);
 
-#endif
+#endif /* FIBONACCI_H */
