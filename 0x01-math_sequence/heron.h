@@ -1,19 +1,25 @@
 #ifndef HERON_H
 #define HERON_H
 
-#include  <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 /**
- * struct s_cell - un struct para almacenar una secuencia de Heron
- * @elt: la aproximación de una raíz cuadrada de un número
- * @next: a pointer to the next node
+ * struct list_math - singly linked list
+ * @elt: result of the sequence
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
  */
-typedef struct s_cell
+
+typedef struct list_math
 {
-	double elt;
-	struct s_cell *next;
+double elt;
+struct list_math *next;
 } t_cell;
 
+void print_list(t_cell *head);
 t_cell *heron(double p, double x0);
 
-#endif
+#endif /* HERON_H */
